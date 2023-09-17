@@ -60,9 +60,9 @@
 &trans     &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp MINUS       &kp EQUAL  &kp N4     &kp N5     &kp N6     &kp SEMI    &trans    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│   PREV   │  DOWN    │   UP     │   NEXT   │   MUTE   │   │ CAPS     │  1 !     │  2 @     │  3 #     │    ?     │   
-&trans    &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_MUTE   &caps_word  &kp N1     &kp N2     &kp N3     &kb QMARK   &trans
+&trans    &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_MUTE   &caps_word  &kp N1     &kp N2     &kp N3     &kp QMARK   &trans
         //├──────────┼──────────┼──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┼──────────┼──────────┤  
-                                   &trans     &trans    &trans          &trans    &trans     &kp ESC       
+                                 &kp RSHFT     &trans    &trans          &trans    &trans     &kp ESC       
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
