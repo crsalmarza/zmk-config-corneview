@@ -59,7 +59,7 @@
         //│ LEFT     │ DOWN     │ UP       │ RIGHT    │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │   ' "    │   
 &trans     HRML(LARW ,  DARW    ,   UARW   ,  RARW    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
-        //│   Z      │  DOWN    │   UP     │   NEXT   │   MUTE   │   │ CAPS     │  1 !     │  2 @     │  3 #     │   / ?    │   
+        //│   Z      │  DOWN    │   UP     │   NEXT   │   MUTE   │   │ CAPS     │  1 !     │  2 @     │  3 #     │   / ? ¿  │   
 &trans        &kp Z &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP    &kp CAPS  &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
         //├──────────┼──────────┼──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┼──────────┼──────────┤  
                                  &kp RSHFT     &trans    &trans          &trans    &trans     &kp ESC       
@@ -67,19 +67,19 @@
             >;
         };
 
-
+\|||
 
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  HOME    │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-   &trans  &kp HOME     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE &trans 
+        //│  HOME    │  [       │  {       │  }       │          │   │    F12   │    F7    │    F8    │    F9    │  ` ~     │
+   &trans  &kp HOME     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp F12      &kp F7    &kp F8     &kp F9     &kp GRAVE &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-  &trans    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE  &trans 
+        //│  !       │  @       │  #       │  $       │  %       │   │    F11   │    F4    │    F5    │    F6    │  ; :     │
+  &trans    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT       &kp F11     &kp F4     &kp F5     &kp F6     &kp SEMI  &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │   ; :    │
-   &trans    &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &kp SEMI   &trans 
+        //│          │          │          │          │          │   │    F10   │    F1    │    F2    │    F3    │   \ |    │
+   &trans    &trans     &trans     &trans     &trans     &trans         &kp F10      &kp F1    &kp F2     &kp F3     &kp BSLH  &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                     &trans    &trans     &trans         &trans     &trans   &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
