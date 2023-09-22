@@ -45,7 +45,7 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  ENTER   │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                            &ht LCTRL TAB  &lt 1 TAB &ht RGUI SPACE  &ht RGUI SPACE  &lt 2 SPACE &ht RSHFT ESC
+                            &ht LCTRL TAB  &lt 1 ENTER &ht RGUI SPACE  &ht RGUI SPACE  &lt 2 SPACE &ht RSHFT ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
