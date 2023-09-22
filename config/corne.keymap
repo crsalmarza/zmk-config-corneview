@@ -62,7 +62,7 @@
         //│   PREV   │  DOWN    │   UP     │   NEXT   │   MUTE   │   │ CAPS     │  1 !     │  2 @     │  3 #     │   / ? ¿  │   
 &trans    &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP      &kp CAPS    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
         //├──────────┼──────────┼──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┼──────────┼──────────┤  
-                                 &kp RSHFT     &trans    &trans          &trans    &trans     &kp ESC       
+                                   &trans    &trans    &trans          &trans    &trans     &trans        
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
