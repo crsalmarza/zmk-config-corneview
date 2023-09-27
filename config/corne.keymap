@@ -53,8 +53,8 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
-        //│  HOME    │ PAGE DN  │ PAGE UP  │ END      │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  0 )     │   
-&trans      &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9     &kp N0      &trans
+        //│  HOME    │ PAGE DN  │ PAGE UP  │ END      │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
+&trans      &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9     BSPC      &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│ LEFT     │  DOWN    │    UP    │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │   ' "    │   
 &trans     HRML(LEFT ,    UP    ,    DOWN  ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
@@ -62,7 +62,7 @@
         //│   PREV   │  DOWN    │   UP     │   NEXT   │   MUTE   │   │ CAPS     │  1 !     │  2 @     │  3 #     │   / ? ¿  │   
 &trans    &kp C_PREV &kp C_VOL_UP &kp C_VOL_DN &kp C_NEXT &kp C_PP      &kp CAPS    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
         //├──────────┼──────────┼──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┼──────────┼──────────┤  
-                                   &trans    &trans    &trans          &trans    &trans     &trans        
+                                   &trans    &trans    &trans          &trans     &kp N0     &trans        
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -87,14 +87,14 @@
         tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-&trans        &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset &trans 
+        //│ RESET    │          │          │          │PROFILE 0 │   │PROFILE 3 │          │          │          │  RESET   │
+&trans     &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0  &bt BT_SEL 3     &trans     &trans     &trans    &sys_reset &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-&trans       &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader  &trans 
+        //│BOOTLOADER│          │          │          │PROFILE 1 │   │PROFILE 4 │          │          │          │BOOTLOADER│
+&trans    &bootloader  &trans     &trans     &trans    &bt BT_SEL 1  &bt BT_SEL 4   &trans     &trans     &trans    &bootloader  &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-&trans         &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans  &trans 
+&trans       &trans     &trans     &trans   &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans  &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                      &trans   &trans     &trans         &trans     &trans   &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
