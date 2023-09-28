@@ -5,6 +5,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define NUM 1
+#define SYM 2
+#define FNC 3
+
+
+
+
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
@@ -31,6 +38,17 @@
         };
     };
 
+
+#define SYM_COM  &lt SYM COMMA
+#define LCA_ENT  &mt LC(LALT) ENTER
+#define SFT_SPC  &ht RSHFT SPACE
+#define SFT_ESC  &ht RSHFT ESC
+#define GUI_SPC  &ht RGUI SPACE
+#define LCA_TAB  &ht LCTRL TAB
+#define NUM_ENT  &lt NUM ENTER
+
+
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -45,12 +63,12 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  ENTER   │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                            &ht LCTRL TAB  &lt 1 ENTER &ht RGUI SPACE  &ht RGUI SPACE  &lt 2 COMMA &ht RSHFT ESC
+                                   LCA_TAB    NUM_ENT    GUI_SPC       GUI_SPC     SYM_COM    SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
 
-        right_layer {
+        NUM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
         //│  TAB     │ PAGE DN  │ PAGE UP  │ END      │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
@@ -67,7 +85,7 @@
             >;
         };
 
-        left_layer {
+        SYM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  HOME    │  [       │  {       │  }       │          │   │    F12   │    F7    │    F8    │    F9    │  ` ~     │
@@ -84,7 +102,7 @@
             >;
         };
 
-        tri_layer {
+        FNC_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │PROFILE 3 │          │          │          │  RESET   │
