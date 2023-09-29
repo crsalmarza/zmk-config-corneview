@@ -17,6 +17,22 @@
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 / {
+    macros {
+        zed_em_kay: zed_em_kay {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
+};
+
+
+/ {
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
@@ -94,8 +110,8 @@
         //│  !       │  @       │  #       │  $       │  %       │   │    F11   │    F4    │    F5    │    F6    │  ; :     │
   &trans    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT       &kp F11     &kp F4     &kp F5     &kp F6     &kp SEMI  &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │    F10   │    F1    │    F2    │    F3    │   \ |    │
-   &trans    &trans     &trans     &trans     &trans     &trans         &kp F10      &kp F1    &kp F2     &kp F3     &kp BSLH  &trans 
+        //│zed_em_kay│          │          │          │          │   │    F10   │    F1    │    F2    │    F3    │   \ |    │
+   &trans <&zed_em_kay>     &trans     &trans     &trans     &trans         &kp F10      &kp F1    &kp F2     &kp F3     &kp BSLH  &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                     &trans    &trans     &trans         &trans     &trans   &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
