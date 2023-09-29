@@ -5,6 +5,25 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#include <zmk/matrix.h>
+#include <zmk/hid.h>
+
+#define MACRO_KEYMAP KC_SPACE
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (record->event.pressed) {
+        switch (keycode) {
+            case MACRO_KEYMAP:
+                // Cuando se presiona la tecla definida como MACRO_KEYMAP
+                // Enviamos la secuencia de teclas que queremos
+                SEND_STRING("Hola, ¿cómo estás?");
+                return false; // Devolvemos falso para que la tecla no se registre como presionada
+        }
+    }
+    return true; // Devolvemos verdadero para que la tecla se registre normalmente si no es la tecla de la macro
+}
+
+
 #define NUM 1
 #define SYM 2
 #define FNC 3
