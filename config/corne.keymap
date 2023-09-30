@@ -96,7 +96,7 @@
         };
 
         NUM_layer {
-            bindings = <c
+            bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
         //│  TAB     │ PAGE DN  │ PAGE UP  │ END      │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
 &trans      &kp TAB    &kp PG_DN  &kp PG_UP  &kp END    &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp BSPC    &trans
