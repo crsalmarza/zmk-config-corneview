@@ -66,13 +66,13 @@
     };
 
 
-#define SYM_COM  &lt SYM COMMA
+#define SYM_TAB  &lt SYM TAB
 #define LCA_ENT  &mt LC(LALT) ENTER
 #define SFT_SPC  &ht RSHFT SPACE
 #define SFT_ESC  &ht RSHFT ESC
 #define GUI_SPC  &ht RGUI SPACE
 #define LCA_TAB  &ht LCTRL TAB
-#define NUM_ENT  &lt NUM ENTER
+#define NUM_TAB  &lt NUM TAB
 
 
 
@@ -90,13 +90,13 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  ENTER   │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   LCA_TAB    NUM_ENT    GUI_SPC       GUI_SPC     SYM_COM    SFT_ESC
+                                   GUI_SPC    NUM_TAB    SFT_SPC       GUI_SPC     SYM_TAB    SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
 
         NUM_layer {
-            bindings = <
+            bindings = <c
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
         //│  TAB     │ PAGE DN  │ PAGE UP  │ END      │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
 &trans      &kp TAB    &kp PG_DN  &kp PG_UP  &kp END    &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp BSPC    &trans
