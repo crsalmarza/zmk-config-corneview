@@ -90,7 +90,7 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  ENTER   │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   GUI_SPC    NUM_TAB    SFT_SPC       GUI_SPC     SYM_TAB    SFT_ESC
+                                   SFT_ESC    NUM_TAB    GUI_SPC      GUI_SPC     SYM_TAB    SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
