@@ -66,7 +66,7 @@
     };
 
 
-#define SYM_TAB  &lt SYM TAB
+#define SYM_SPC  &lt SYM SPACE
 #define LCA_ENT  &mt LC(LALT) ENTER
 #define SFT_SPC  &ht RSHFT SPACE
 #define SFT_ESC  &ht RSHFT ESC
@@ -90,7 +90,7 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  ENTER   │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   SFT_ESC    NUM_TAB    GUI_SPC      GUI_SPC     SYM_TAB    SFT_ESC
+                                   SFT_ESC    NUM_TAB    GUI_SPC      GUI_SPC     SYM_SPC    SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -98,8 +98,8 @@
         NUM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
-        //│  TAB     │ PAGE DN  │ PAGE UP  │ END      │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
-&trans      &kp TAB    &kp PG_DN  &kp PG_UP  &kp END    &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp BSPC    &trans
+        //│   HOME   │ PAGE DN  │ PAGE UP  │ END      │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
+&trans      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp BSPC    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│ LEFT     │  DOWN    │    UP    │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │   ' "    │   
 &trans     HRML(LEFT ,    UP    ,    DOWN  ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
@@ -115,8 +115,8 @@
         SYM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  HOME    │  [       │  {       │  }       │          │   │    F12   │    F7    │    F8    │    F9    │  ` ~     │
-   &trans  &kp HOME     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp F12      &kp F7    &kp F8     &kp F9     &kp GRAVE &trans 
+        //│              │  [       │  {       │  }       │          │   │    F12   │    F7    │    F8    │    F9    │  ` ~     │
+   &trans    &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp F12      &kp F7    &kp F8     &kp F9     &kp GRAVE &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │ rut_rpy  │    vpn   │          │   │    F11   │    F4    │    F5    │    F6    │  ; :     │
   &trans    &kp EXCL   &kp AT     &rut_rpy     &vpn       &trans       &kp F11     &kp F4     &kp F5     &kp F6     &kp SEMI  &trans 
