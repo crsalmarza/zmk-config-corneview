@@ -122,7 +122,7 @@
   &trans    &kp EXCL   &kp AT     &rut_rpy     &vpn       &trans       &kp F11     &kp F4     &kp F5     &kp F6     &kp SEMI  &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │    F10   │    F1    │    F2    │    F3    │   \ |    │
-   &trans  &kp LG(TAB)     &trans     &trans     &trans     &trans         &kp F10      &kp F1    &kp F2     &kp F3     &kp BSLH  &trans 
+   &trans  &kp LG(TAB) &kt LALT  &kt LG(TAB)     &trans     &trans         &kp F10      &kp F1    &kp F2     &kp F3     &kp BSLH  &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                     &trans    &trans     &trans         &trans     &trans   &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
