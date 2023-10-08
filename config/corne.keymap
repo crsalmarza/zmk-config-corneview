@@ -68,7 +68,7 @@
 
 #define SYM_SPC  &lt SYM SPACE
 #define LCA_ENT  &mt LC(LALT) ENTER
-#define SFT_SPC  &ht RSHFT SPACE
+#define SFT_ENT  &ht RSHFT ENTER
 #define SFT_ESC  &ht RSHFT ESC
 #define GUI_SPC  &ht RGUI SPACE
 #define GUI_TAB  &ht RGUI LG(TAB)
@@ -91,7 +91,7 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  ENTER   │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   SFT_ESC    NUM_TAB    GUI_TAB      GUI_SPC     SYM_SPC    SFT_ESC
+                                   SFT_ENT    NUM_TAB    GUI_TAB      GUI_SPC     SYM_SPC    SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
