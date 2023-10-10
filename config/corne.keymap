@@ -22,6 +22,10 @@
             label = "ZM_vpn";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
             bindings
                 = <&macro_tap &kp C &kp S &kp A &kp N &kp H &kp U &kp E &kp Z &kp A &kp A &kp DOT  &kp N2  &kp N2 &kp R>
                 ;
