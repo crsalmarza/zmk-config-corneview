@@ -22,6 +22,7 @@
             label = "ZM_vpn";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            tapping-term-ms = <120>;
             bindings
                 = <&macro_tap &kp C &kp S &kp A &kp N &kp H &kp U &kp E &kp Z &kp A &kp A &kp DOT  &kp N2  &kp N2 &kp R>
                 ;
@@ -35,6 +36,7 @@
             label = "ZM_rut_rpy";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            tapping-term-ms = <120>;
             bindings
                 = <&macro_tap &kp N8 &kp N3 &kp N3 &kp N8 &kp N2 &kp N7 &kp N0 &kp N0 &kp MINUS &kp N6>
 
