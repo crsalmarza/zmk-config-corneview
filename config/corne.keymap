@@ -48,6 +48,23 @@
 };
 
 / {
+    macros {
+        prueba: prueba {
+            label = "ZM_prueba";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+           wait-ms = <10>;
+            bindings
+                = <&kp F &kp A &kp S &kp T>
+                , <&macro_wait_time 500>
+                , <&kp S &kp L &kp O &kp W>
+            ;
+        };
+    };
+};
+
+
+/ {
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
@@ -124,7 +141,7 @@
    &trans    &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp F12      &kp F7    &kp F8     &kp F9     &kp GRAVE &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │ rut_rpy  │    vpn   │          │   │    F11   │    F4    │    F5    │    F6    │  ; :     │
-  &trans    &kp EXCL   &kp AT     &rut_rpy     &vpn       &trans       &kp F11     &kp F4     &kp F5     &kp F6     &kp SEMI  &trans 
+  &trans    &kp EXCL   &prueba     &rut_rpy     &vpn       &trans       &kp F11     &kp F4     &kp F5     &kp F6     &kp SEMI  &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │    F10   │    F1    │    F2    │    F3    │   \ |    │
    &trans  &kp LG(TAB) &kt LALT  &kt LG(TAB)     &trans     &trans         &kp F10      &kp F1    &kp F2     &kp F3     &kp BSLH  &trans 
