@@ -152,8 +152,8 @@
         NUM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
-        //│   &my_m  │   my_p   │ rut_rpy  │    vpn   │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
-&trans       &my_m     &my_p   &rut_rpy     &vpn     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp BSPC    &trans
+        //│    tab   │   my_m   │    my_p  │    vpn   │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
+&trans      &kp TAB     &my_m       &my_p      &vpn     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp BSPC    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│ LEFT     │  DOWN    │    UP    │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │   ' "    │   
 &trans     HRML(LEFT ,    UP    ,    DOWN  ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
