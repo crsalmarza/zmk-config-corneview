@@ -49,6 +49,38 @@
 
 / {
     macros {
+        my_p: my_p {
+            label = "ZM_my_p";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap  &kp M  &kp A &kp U &kp R &kp N1 &kp N1>
+
+                ;
+        };
+    };
+};
+
+/ {
+    macros {
+        my_m: my_m {
+            label = "ZM_my_m";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_tap  &kp C  &kp R &kp S &kp A &kp L  &kp M &kp A &kp R &kp Z  &kp A &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>
+
+                ;
+        };
+    };
+};
+
+/ {
+    macros {
         prueba: prueba {
             label = "ZM_prueba";
             compatible = "zmk,behavior-macro";
@@ -120,8 +152,8 @@
         NUM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
-        //│   HOME   │ PAGE DN  │ PAGE UP  │ END      │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
-&trans      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp BSPC    &trans
+        //│   &my_m  │   my_p   │ rut_rpy  │    vpn   │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
+&trans       &my_m     &my_p   &rut_rpy     &vpn     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp BSPC    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│ LEFT     │  DOWN    │    UP    │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │   ' "    │   
 &trans     HRML(LEFT ,    UP    ,    DOWN  ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
@@ -137,8 +169,8 @@
         SYM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │    F12   │    F7    │    F8    │    F9    │  ` ~     │
-   &trans    &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp F12      &kp F7    &kp F8     &kp F9     &kp GRAVE &trans 
+        //│   HOME   │ PAGE DN  │ PAGE UP  │ END      │          │   │    F12   │    F7    │    F8    │    F9    │  ` ~     │
+   &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans         &kp F12      &kp F7    &kp F8     &kp F9     &kp GRAVE &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │ rut_rpy  │    vpn   │          │   │    F11   │    F4    │    F5    │    F6    │  ; :     │
   &trans    &kp EXCL   &prueba     &rut_rpy     &vpn       &trans       &kp F11     &kp F4     &kp F5     &kp F6     &kp SEMI  &trans 
