@@ -135,11 +135,11 @@
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-&trans      &kp Q      &kp W      &kp E      &kp R      &kp T           &kp Y      &kp U      &kp I      &kp O      &kp P     &trans     
+        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  BSPC    │
+&trans      &kp Q      &kp W      &kp E      &kp R      &kp T           &kp Y      &kp U      &kp I      &kp O     &kp BSPC     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ BSPC     │
-&trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,  BSPC    ) &trans     
+        //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │    P     │
+&trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,     P    ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  ENTER   │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER  &trans     
@@ -152,31 +152,31 @@
         NUM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
-        //│    tab   │   my_m   │    my_p  │    vpn   │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
-&trans      &kp TAB     &my_m       &my_p      &vpn     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp BSPC    &trans
+        //│    ` ~   │   \ |    │    my_m  │    my_p  │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
+&trans     &kp GRAVE   &kp BSLH      my_m     &my_p     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp BSPC    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│ LEFT     │  DOWN    │    UP    │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │   ' "    │   
-&trans     HRML(LEFT ,    UP    ,    DOWN  ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
+&trans     HRML(LEFT ,    UP    ,    DOWN  ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT    )  &trans    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│   PREV   │  DOWN    │   UP     │   NEXT   │   MUTE   │   │ CAPS     │  1 !     │  2 @     │  3 #     │   / ? ¿  │   
 &trans    &kp C_PREV &kp C_VOL_UP &kp C_VOL_DN &kp C_NEXT &kp C_PP      &kp CAPS    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
         //├──────────┼──────────┼──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┼──────────┼──────────┤  
                                    &trans    &trans    &trans          &trans     &kp N0     &trans        
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
-            >;
+            >;    
         };
 
         SYM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│   HOME   │ PAGE DN  │ PAGE UP  │ END      │          │   │    F12   │    F7    │    F8    │    F9    │  ` ~     │
-   &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans         &kp F12      &kp F7    &kp F8     &kp F9     &kp GRAVE &trans 
+        //│   HOME   │ PAGE DN  │ PAGE UP  │ END      │          │   │    F12   │    F7    │    F8    │    F9    │  BSPC     │
+   &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans         &kp F12      &kp F7    &kp F8     &kp F9     &kp BSPC  &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │ rut_rpy  │    vpn   │          │   │    F11   │    F4    │    F5    │    F6    │  ; :     │
-  &trans    &kp EXCL   &prueba     &rut_rpy     &vpn       &trans       &kp F11     &kp F4     &kp F5     &kp F6     &kp SEMI  &trans 
+        //│ LEFT     │  DOWN    │    UP    │  RIGHT   │          │   │    F11   │    F4    │    F5    │    F6    │  ; :     │
+  &trans   HRML(LEFT ,    UP    ,    DOWN  ,  RIGHT    )  &trans       &kp F11   HRMR( F4  ,    F5    ,    F6    , SEMI     ) &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │    F10   │    F1    │    F2    │    F3    │   \ |    │
-   &trans  &kp LG(TAB) &kt LALT  &kt LG(TAB)     &trans     &trans         &kp F10      &kp F1    &kp F2     &kp F3     &kp BSLH  &trans 
+   &trans  &kp LG(TAB) &kt LALT  &kt LG(TAB)     &trans     &trans     &kp F10      &kp F1    &kp F2     &kp F3     &kp BSLH  &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                     &trans    &trans     &trans         &trans     &trans   &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
