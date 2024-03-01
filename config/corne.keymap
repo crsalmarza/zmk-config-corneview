@@ -135,14 +135,14 @@
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  BSPC    │
-&trans      &kp Q      &kp W      &kp E      &kp R      &kp T           &kp Y      &kp U      &kp I      &kp O     &kp BSPC     &trans     
+        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │    P     │
+&trans      &kp Q      &kp W      &kp E      &kp R      &kp T           &kp Y      &kp U      &kp I      &kp O      &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │    P     │
-&trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,     P    ) &trans     
+        //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ENTER   │
+&trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   ENTER  ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  ENTER   │
- &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER  &trans     
+        //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  / ? ¿   │
+ &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    SFT_ENT    NUM_TAB    GUI_TAB      GUI_SPC     SYM_SPC    SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
