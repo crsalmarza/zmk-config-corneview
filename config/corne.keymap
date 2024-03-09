@@ -25,7 +25,7 @@
             wait-ms = <5>;
             tap-ms = <5>;
             bindings
-                = <&macro_tap &kp C &kp R &kp I &kp S &kp T &kp DOT &kp M &kp A &kp U &kp R &kp DOT  &kp N6  &kp N8 >
+                = <&macro_tap &mt LSHIFT C &kp R &kp I &kp S &kp T &kp DOT &mt LSHIFT M &kp A &kp U &kp R &kp DOT  &kp N6  &kp N8 >
                 ;
         };
     };
@@ -124,7 +124,7 @@
 #define SFT_ENT  &ht RSHFT ENTER
 #define SFT_ESC  &ht RSHFT ESC
 #define SFT_BSPC &ht RSHFT BSPC
-#define GUI_SPC  &ht RGUI SPACE
+#define GUI_BSPC  &ht RGUI BSPC
 //#define GUI_TAB  &ht RGUI LG(TAB)
 #define GUI_ENT  &ht RGUI ENTER
 #define LCA_TAB  &ht LCTRL TAB
@@ -146,7 +146,7 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  / ? ¿   │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   SFT_ESC    NUM_TAB    GUI_ENT      GUI_SPC     SYM_SPC    SFT_BSPC
+                                   SFT_ESC    NUM_TAB    GUI_BSPC      GUI_ENT     SYM_SPC    SFT_BSPC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
