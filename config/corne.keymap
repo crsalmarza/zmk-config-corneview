@@ -18,14 +18,14 @@
 
 / {
     macros {
-        vpn: vpn {
-            label = "ZM_vpn";
+        my_appl: my_appl {
+            label = "ZM_my_appl";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
             bindings
-                = <&macro_tap &kp C &kp S &kp A &kp N &kp H &kp U &kp E &kp Z &kp A &kp A &kp DOT  &kp N2  &kp N2 &kp R>
+                = <&macro_tap &kp C &kp R &kp I &kp S &kp T &kp DOT &kp M &kp A &kp U &kp R &kp DOT  &kp N6  &kp N8 >
                 ;
         };
     };
@@ -125,7 +125,8 @@
 #define SFT_ESC  &ht RSHFT ESC
 #define SFT_BSPC &ht RSHFT BSPC
 #define GUI_SPC  &ht RGUI SPACE
-#define GUI_TAB  &ht RGUI LG(TAB)
+//#define GUI_TAB  &ht RGUI LG(TAB)
+#define GUI_ENT  &ht RGUI ENTER
 #define LCA_TAB  &ht LCTRL TAB
 #define NUM_TAB  &lt NUM TAB
 
@@ -145,7 +146,7 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  / ? ¿   │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   SFT_ESC    NUM_TAB    GUI_TAB      GUI_SPC     SYM_SPC    SFT_BSPC
+                                   SFT_ESC    NUM_TAB    GUI_ENT      GUI_SPC     SYM_SPC    SFT_BSPC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -170,8 +171,8 @@
         SYM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│   HOME   │ PAGE DN  │ PAGE UP  │ END      │          │   │    F12   │    F7    │    F8    │    F9    │  BSPC     │
-   &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans         &kp F12      &kp F7    &kp F8     &kp F9     &kp BSPC  &trans 
+        //│   HOME   │ PAGE DN  │ PAGE UP  │ END      │ my_appl  │   │    F12   │    F7    │    F8    │    F9    │  BSPC    │
+   &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &my_appl       &kp F12      &kp F7    &kp F8     &kp F9     &kp BSPC  &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ LEFT     │  DOWN    │    UP    │  RIGHT   │          │   │    F11   │    F4    │    F5    │    F6    │  ; :     │
   &trans   HRML(LEFT ,    UP    ,    DOWN  ,  RIGHT    )  &trans       &kp F11   HRMR( F4  ,    F5    ,    F6    , SEMI     ) &trans 
