@@ -128,6 +128,7 @@
 #define GUI_BSPC  &ht RGUI BSPC
 //#define GUI_TAB  &ht RGUI LG(TAB)
 #define GUI_ENT  &ht RGUI ENTER
+#define GUI_SPC  &ht RGUI SPACE
 #define LCA_TAB  &ht LCTRL TAB
 #define NUM_TAB  &lt NUM TAB
 
@@ -141,13 +142,13 @@
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │    P     │
 &trans      &kp Q      &kp W      &kp E      &kp R      &kp T           &kp Y      &kp U      &kp I      &kp O      &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   ' "    │
-&trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   SQT    ) &trans     
+        //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   BSPC    │
+&trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC    ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  / ? ¿   │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   SFT_ESC    NUM_TAB    GUI_BSPC      GUI_ENT     SYM_SPC    SFT_BSPC
+                                   SFT_ESC    NUM_TAB    GUI_ENT      GUI_SPC     SYM_SPC    SFT_BSPC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -155,11 +156,11 @@
         NUM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
-        //│    ` ~   │ my_appl  │    my_m  │    my_p  │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  BSPC    │   
-&trans     &kp GRAVE   &my_appl      &my_m     &my_p     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp BSPC    &trans
+        //│    ` ~   │ my_appl  │    my_m  │    my_p  │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  ; :     │   
+&trans     &kp GRAVE   &my_appl      &my_m     &my_p     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp SEMI    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
-        //│ LEFT     │  DOWN    │    UP    │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │   ; :    │   
-&trans     HRML(LEFT ,    UP    ,    DOWN  ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SEMI    )  &trans    
+        //│ LEFT     │  DOWN    │    UP    │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │    ' "   │   
+&trans     HRML(LEFT ,    UP    ,    DOWN  ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT    )  &trans    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│   PREV   │  DOWN    │   UP     │   NEXT   │   MUTE   │   │ CAPS     │  1 !     │  2 @     │  3 #     │    \ |   │   
 &trans    &kp C_PREV &kp C_VOL_UP &kp C_VOL_DN &kp C_NEXT &kp C_PP      &kp CAPS    &kp N1     &kp N2     &kp N3    &kp BSLH   &trans
