@@ -134,6 +134,12 @@
 #define CTL_TAB  &ht LCTRL TAB
 #define CTL_SPC  &ht RCTRL SPACE
 #define NUM_TAB  &lt NUM TAB
+//
+#define V_DN     &kp C_VOL_DN
+#define V_UP     &kp C_VOL_UP
+#define R_NT     &kp C_NEXT
+#define R_PR     &kp C_PREV
+#define R_PA     &kp C_PP
 
 
 
@@ -163,10 +169,10 @@
 &trans     &kp GRAVE   &kp BSPC   &my_appl     &my_p     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp SEMI    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│ LEFT     │  DOWN    │    UP    │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │    ' "   │   
-&trans     HRML(LEFT ,    UP    ,    DOWN  ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT    )  &trans    
+&trans     HRML(LEFT ,  DOWN    ,    UP    ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT    )  &trans    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│   PREV   │  DOWN    │   UP     │   NEXT   │   MUTE   │   │   \ |    │  1 !     │  2 @     │  3 #     │  / ? ¿   │   
-&trans    &kp C_PREV &kp C_VOL_UP &kp C_VOL_DN &kp C_NEXT &kp C_PP     &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
+&trans        R_PR       V_DN       V_UP      R_NT        R_PA         &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
         //├──────────┼──────────┼──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┼──────────┼──────────┤  
                                    &trans    &trans    &trans          &trans     &kp N0     &trans        
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -180,7 +186,7 @@
    &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &my_appl       &kp F12      &kp F7    &kp F8     &kp F9     &kp BSPC  &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ LEFT     │  DOWN    │    UP    │  RIGHT   │          │   │    F11   │    F4    │    F5    │    F6    │  ; :     │
-  &trans   HRML(LEFT ,    UP    ,    DOWN  ,  RIGHT    )  &trans       &kp F11   HRMR( F4  ,    F5    ,    F6    , SEMI     ) &trans 
+  &trans   HRML(LEFT ,  DOWN    ,    UP    ,  RIGHT    )  &trans       &kp F11   HRMR( F4  ,    F5    ,    F6    , SEMI     ) &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │    F10   │    F1    │    F2    │    F3    │   \ |    │
    &trans  &kp LG(TAB) &kt LALT  &kt LG(TAB)     &trans     &trans     &kp F10      &kp F1    &kp F2     &kp F3     &kp BSLH  &trans 
