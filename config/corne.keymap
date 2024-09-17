@@ -166,7 +166,7 @@
 &trans     HRML(LEFT ,  DOWN    ,    UP    ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT    )  &trans    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│   PREV   │  DOWN    │   UP     │   NEXT   │   MUTE   │   │   \ |    │  1 !     │  2 @     │  3 #     │  / ? ¿   │   
-&trans    &kp C_PREV &kp C_VOL_UP &kp C_VOL_DN &kp C_NEXT &kp C_PP     &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
+&trans    &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP     &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
         //├──────────┼──────────┼──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┼──────────┼──────────┤  
                                    &trans    &trans    &trans          &trans     &kp N0     &trans        
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
