@@ -151,7 +151,7 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    GUI_ENT  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   ALT_ESC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     ALT_ESC
+                                   CTL_SPC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     ALT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -160,7 +160,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
         //│    ` ~   │ my_appl  │    my_m  │    my_p  │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  ; :     │   
-&trans     &kp GRAVE   &kp BSPC   &my_appl     &my_p     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp SEMI    &trans
+&trans     &kp GRAVE   ALT_ESC   &my_appl     &my_p     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp SEMI    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│ LEFT     │  DOWN    │    UP    │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │    ' "   │   
 &trans     HRML(LEFT ,  DOWN    ,    UP    ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT    )  &trans    
