@@ -146,7 +146,7 @@
 &trans      &kp Q      &kp W      &kp E      &kp R      &kp T           &kp Y      &kp U      &kp I      &kp O      &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   BSPC   │
-&trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC    ) &trans     
+&trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    GUI_ENT  &trans     
@@ -159,14 +159,14 @@
         NUM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
-        //│    ` ~   │ my_appl  │    my_m  │    my_p  │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  ; :     │   
-&trans     &kp GRAVE   ALT_ESC   &my_appl     &my_p     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp SEMI    &trans
+        //│    ` ~   │  my_m    │    UP    │    my_p  │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  ; :     │   
+&trans     &kp GRAVE   &my_appl      UP       &my_p     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp SEMI    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
-        //│ LEFT     │  DOWN    │    UP    │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │    ' "   │   
-&trans     HRML(LEFT ,  DOWN    ,    UP    ,  RIGHT    ) &kp MINUS      &kp EQUAL HRMR( N4  ,   N5     ,   N6     ,  SQT    )  &trans    
+        //│ LEFT     │  DOWN    │   DOWN   │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │    ' "   │   
+&trans     HRML(ESC  ,  LEFT    ,   DOW    ,  RIGHT   ) &kp MINUS     &kp EQUAL  HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│   PREV   │  DOWN    │   UP     │   NEXT   │   MUTE   │   │   \ |    │  1 !     │  2 @     │  3 #     │  / ? ¿   │   
-&trans    &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP     &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
+&trans      &kp TAB  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP     &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
         //├──────────┼──────────┼──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┼──────────┼──────────┤  
                                    &trans    &trans    &trans          &trans     &kp N0     &trans        
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
