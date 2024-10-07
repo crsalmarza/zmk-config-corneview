@@ -160,7 +160,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
         //│    ` ~   │  my_m    │    UP    │    my_p  │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  ; :     │   
-&trans     &kp GRAVE   &my_appl    &kp UP     &my_p     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp SEMI    &trans
+&trans     &kp GRAVE   &my_appl    &kp U     &my_p     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp SEMI    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│ LEFT     │  DOWN    │   DOWN   │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │    ' "   │   
 &trans     HRML(LEFT ,  LEFT    ,   DOW    ,  RIGHT   ) &kp MINUS     &kp EQUAL  HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
@@ -180,7 +180,7 @@
    &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &my_appl       &kp F12      &kp F7    &kp F8     &kp F9     &kp BSPC  &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ LEFT     │  DOWN    │    UP    │  RIGHT   │          │   │    F11   │    F4    │    F5    │    F6    │  ; :     │
-  &trans   HRML(LEFT ,  DOWN    ,    UP    ,  RIGHT    )  &trans       &kp F11   HRMR( F4  ,    F5    ,    F6    , SEMI     ) &trans 
+  &trans   HRML(LEFT ,  DOWN    ,    UP    ,  RIGHT   )  &trans        &kp F11   HRMR( F4  ,    F5    ,    F6    , SEMI     ) &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │    F10   │    F1    │    F2    │    F3    │   \ |    │
    &trans  &kp LG(TAB) &kt LALT  &kt LG(TAB)     &trans     &trans     &kp F10      &kp F1    &kp F2     &kp F3     &kp BSLH  &trans 
