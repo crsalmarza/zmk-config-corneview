@@ -132,8 +132,10 @@
 #define GUI_ENT  &ht RGUI ENTER
 #define GUI_SPC  &ht RGUI SPACE
 #define CTL_TAB  &ht LCTRL TAB
+#define CTL_ESC  &ht LCTRL ESC
 #define CTL_SPC  &ht RCTRL SPACE
 #define NUM_TAB  &lt NUM TAB
+#define NUM_SPC  &lt NUM SPACE
 
 
 
@@ -151,7 +153,7 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    GUI_ENT  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   CTL_SPC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     ALT_ESC
+                                   CTL_ESC   NUM_SPC     GUI_ENT       CTL_SPC    SYM_SPC     ALT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
