@@ -178,8 +178,8 @@
         SYM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│   HOME   │ PAGE DN  │ PAGE UP  │ END      │ my_appl  │   │    F12   │    F7    │    F8    │    F9    │  BSPC    │
-   &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &my_appl       &kp F12      &kp F7    &kp F8     &kp F9     &kp BSPC  &trans 
+        //│    1 !   │    2 @   │   3 #    │   4 $    │    5 %   │   │   6 ^    │   7 &    │   8 *    │   9 (    │   0 )    │
+   &trans    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5        &kp N6      &kp N7    &kp N8     &kp N9     &kp N0     &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ LEFT     │  DOWN    │    UP    │  RIGHT   │          │   │    F11   │    F4    │    F5    │    F6    │  ; :     │
   &trans   HRML(LEFT ,  DOWN    ,    UP    ,  RIGHT   )  &trans        &kp F11   HRMR( F4  ,    F5    ,    F6    , SEMI     ) &trans 
@@ -189,6 +189,9 @@
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                     &trans    &trans     &trans         &trans     &trans   &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
+
+//           │   HOME   │ PAGE DN  │ PAGE UP  │ END      │ my_appl  │   │    F12   │    F7    │    F8    │    F9    │  BSPC    │
+//   &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &my_appl       &kp F12      &kp F7    &kp F8     &kp F9     &kp BSPC  &trans 
             >;
         };
 
