@@ -133,7 +133,7 @@
 #define GUI_SPC  &ht RGUI SPACE
 #define CTL_TAB  &ht LCTRL TAB
 #define CTL_ESC  &ht LCTRL ESC
-#define CTL_ACUTE &ht LCTRL GRAVE_ACUTE
+#define CTL_ACUTE &ht LCTRL ACUTE
 #define CTL_SPC  &ht RCTRL SPACE
 #define NUM_TAB  &lt NUM TAB
 #define NUM_SPC  &lt NUM SPACE
