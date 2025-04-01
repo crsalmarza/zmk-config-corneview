@@ -14,8 +14,8 @@
 
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT  k2  &ht LCTRL  k3  &ht LGUI  k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI  k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LCTRL  k2  &ht LALT  k3  &ht LGUI  k4
+#define HRMR(k1,k2,k3,k4) &ht RGUI  k1  &ht  RALT  k2  &ht RCTRL k3  &ht RSHFT k4
 
 / {
     macros {
@@ -154,7 +154,7 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    GUI_ENT  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                 CTL_ACUTE   NUM_SPC     GUI_ENT       CTL_SPC    SYM_SPC     ALT_ESC
+                                   ALT_ESC   NUM_SPC     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
