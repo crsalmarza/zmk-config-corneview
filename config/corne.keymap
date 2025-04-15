@@ -154,7 +154,7 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
  &trans     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    GUI_ENT  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   ALT_ESC   NUM_SPC     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
+                                   ALT_ESC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -169,7 +169,7 @@
 &trans     HRML(TAB  ,  LEFT    ,   DOWN   ,  RIGHT   ) &kp MINUS     &kp EQUAL  HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│   PREV   │  DOWN    │   UP     │   NEXT   │   MUTE   │   │   \ |    │  1 !     │  2 @     │  3 #     │  / ? ¿   │   
-&trans      &kp ESC  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP     &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
+&trans HRML(C_PREV   , C_VOL_DN , C_VOL_UP ,  C_NEXT  ) &kp C_PP     &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
         //├──────────┼──────────┼──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┼──────────┼──────────┤  
                                    &trans    &trans    &trans          &trans     &kp N0     &trans        
         //                          ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
