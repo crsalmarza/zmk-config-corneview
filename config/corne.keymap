@@ -15,7 +15,10 @@
 // === Definiciones ===
 //#define A_ACUTE &mt A a_acute  // a → á
 //#define N_TILDE &mt N &n_tilde   // n → ñ
-#define N_TILDE &ht N &n_tilde
+//#define N_TILDE &ht N &n_tilde
+#define N_TILDE &kp N
+
+
 
 // Home row mods macro
 //#define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT  k2  &ht LCTRL  k3  &ht LSHFT  k4
