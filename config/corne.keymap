@@ -182,7 +182,7 @@
 &trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
- &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B          &kp N    &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
+ &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B         &N_TILDE    &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    ALT_ESC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
