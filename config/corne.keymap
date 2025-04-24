@@ -4,7 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <behaviors/tap_dance.dtsi>
+
 
 
 #define NUM 1
@@ -14,7 +14,7 @@
 
 // === Definiciones ===
 //#define A_ACUTE &mt A a_acute  // a → á
-//#define N_TILDE &mt N n_tilde   // n → ñ
+#define N_TILDE &mt N &n_tilde   // n → ñ
 
 // Home row mods macro
 //#define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT  k2  &ht LCTRL  k3  &ht LSHFT  k4
@@ -66,10 +66,12 @@
             bindings = <&kp LA(E)>, <&kp U>;
         };
 
-        // Macro para ñ (doble tap en N → ñ)
+       // Ñ (doble tap en N)
         n_tilde: n_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings = <&kp LA(N)>, <&kp N>;
         };
     };
@@ -77,52 +79,7 @@
 
 
 
-//Comportamiento de doble tap usando tap-dance
-/ {
-    behaviors {
-        td_accent_a: tap_dance_accent_a {
-            compatible = "zmk,tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>; // Tiempo máximo entre taps
-            bindings = <&a_acute>, <&kp A>; // Doble tap: á | Un tap: a
-        };
 
-        td_accent_e: tap_dance_accent_e {
-            compatible = "zmk,tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&e_acute>, <&kp E>;
-        };
-
-        td_accent_i: tap_dance_accent_i {
-            compatible = "zmk,tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&i_acute>, <&kp I>;
-        };
-
-        td_accent_o: tap_dance_accent_o {
-            compatible = "zmk,tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&o_acute>, <&kp O>;
-        };
-
-        td_accent_u: tap_dance_accent_u {
-            compatible = "zmk,tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&u_acute>, <&kp U>;
-        };
-
-        td_n_tilde: tap_dance_n_tilde {
-            compatible = "zmk,tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&n_tilde>, <&kp N>; // Doble tap: ñ | Un tap: n
-        };
-    };
-};
 
 
 / {
@@ -261,7 +218,7 @@
 &trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
- &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B       &td_n_tilde    &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
+ &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B         N_TILDE    &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    ALT_ESC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
