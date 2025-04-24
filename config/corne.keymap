@@ -77,6 +77,53 @@
 
 
 
+//Comportamiento de doble tap usando tap-dance
+/ {
+    behaviors {
+        td_accent_a: tap_dance_accent_a {
+            compatible = "zmk,tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>; // Tiempo máximo entre taps
+            bindings = <&a_acute>, <&kp A>; // Doble tap: á | Un tap: a
+        };
+
+        td_accent_e: tap_dance_accent_e {
+            compatible = "zmk,tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&e_acute>, <&kp E>;
+        };
+
+        td_accent_i: tap_dance_accent_i {
+            compatible = "zmk,tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&i_acute>, <&kp I>;
+        };
+
+        td_accent_o: tap_dance_accent_o {
+            compatible = "zmk,tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&o_acute>, <&kp O>;
+        };
+
+        td_accent_u: tap_dance_accent_u {
+            compatible = "zmk,tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&u_acute>, <&kp U>;
+        };
+
+        td_n_tilde: tap_dance_n_tilde {
+            compatible = "zmk,tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&n_tilde>, <&kp N>; // Doble tap: ñ | Un tap: n
+        };
+    };
+};
+
 
 / {
     macros {
@@ -214,7 +261,7 @@
 &trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
- &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B       &mt N &n_tilde    &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
+ &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B       &td_n_tilde    &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    ALT_ESC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
