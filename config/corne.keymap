@@ -44,21 +44,6 @@
         // Repite para é, í, ó, ú si necesitas...
     };
 
-    // === Comportamientos de doble clic ===
-    behaviors {
-        mt_aacute: mt {
-            compatible = "zmk,behavior-mod-tap";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&a_acute>;
-            tapping-term-ms = <200>; // Ajusta tiempo si es necesario
-        };
-        mt_ntilde: mt {
-            compatible = "zmk,behavior-mod-tap";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&n_tilde>;
-            tapping-term-ms = <200>;
-        };
-    };
 };
 
 
@@ -172,6 +157,8 @@
 
 #define SYM_SPC  &lt SYM SPACE
 //#define LCA_ENT  &mt LC(LALT) ENTER
+#define A_ACUTE &mt a a_acute 
+#define N_TILDE &mt n n_tilde 
 #define SFT_ENT  &ht RSHFT ENTER
 #define SFT_ESC  &ht RSHFT ESC
 #define ALT_ESC  &ht LALT ESC
@@ -201,7 +188,7 @@
 &trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
- &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B        &mt_ntilde N    &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
+ &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B          N_TILDE   &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    ALT_ESC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
