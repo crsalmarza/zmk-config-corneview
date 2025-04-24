@@ -24,6 +24,46 @@
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT  k2  &ht LCTRL  k3  &ht LGUI  k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI  k1 &ht RCTRL k2  &ht RALT k3  &ht RSHFT  k4
 
+// === Macros para acentos y ñ (macOS U.S.) ===
+/ {
+    macros {
+        // á (Option + e → a)
+        a_acute: a_acute {
+            label = "ZM_a_acute";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E)>, <&kp A>;
+        };
+        // ñ (Option + n → n)
+        n_tilde: n_tilde {
+            label = "ZM_n_tilde";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N)>, <&kp N>;
+        };
+        // Repite para é, í, ó, ú si necesitas...
+    };
+
+    // === Comportamientos de doble clic ===
+    behaviors {
+        mt_aacute: mt {
+            compatible = "zmk,behavior-mod-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&a_acute>;
+            tapping-term-ms = <200>; // Ajusta tiempo si es necesario
+        };
+        mt_ntilde: mt {
+            compatible = "zmk,behavior-mod-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&n_tilde>;
+            tapping-term-ms = <200>;
+        };
+    };
+};
+
+
+
+
 
 / {
     macros {
@@ -128,23 +168,6 @@
         };
     };
 
-/ {
-  macros {
-    // Caracteres en español (macOS U.S.)
-    n_tilde: n_tilde { bindings = <&kp LA(N) &kp SPACE>; }; // ñ
-    a_acute: a_acute { bindings = <&kp LA(E) &kp A>; };     // á
-    e_acute: e_acute { bindings = <&kp LA(E) &kp E>; };     // é
-  };
-
-  behaviors {
-    // Doble clic para ñ y á
-    mt_ntilde: mt { bindings = <&kp N>, <&n_tilde>; }; // n → ñ
-    mt_aacute: mt { bindings = <&kp A>, <&a_acute>; }; // a → á
-  };
-
-};
-
-
 
 
 #define SYM_SPC  &lt SYM SPACE
@@ -178,7 +201,7 @@
 &trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
- &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B         &mt_ntilde   &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
+ &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B        &mt_ntilde N    &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    ALT_ESC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
