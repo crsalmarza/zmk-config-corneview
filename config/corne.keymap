@@ -171,7 +171,7 @@
 
 
 #define SYM_SPC  &lt SYM SPACE
-#define LCA_ENT  &mt LC(LALT) ENTER
+//#define LCA_ENT  &mt LC(LALT) ENTER
 #define SFT_ENT  &ht RSHFT ENTER
 #define SFT_ESC  &ht RSHFT ESC
 #define ALT_ESC  &ht LALT ESC
