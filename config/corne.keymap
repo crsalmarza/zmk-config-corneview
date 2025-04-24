@@ -11,7 +11,9 @@
 #define FNC 3
 
 
-
+// === Definiciones ===
+#define A_ACUTE &mt A a_acute  // a → á
+#define N_TILDE &mt N n_tilde   // n → ñ
 
 // Home row mods macro
 //#define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT  k2  &ht LCTRL  k3  &ht LSHFT  k4
@@ -27,18 +29,12 @@
 // === Macros para acentos y ñ (macOS U.S.) ===
 / {
     macros {
-        // á (Option + e → a)
+       // Macro para á (Option + e → a en macOS)
         a_acute: a_acute {
-            label = "ZM_a_acute";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
             bindings = <&kp LA(E)>, <&kp A>;
         };
-        // ñ (Option + n → n)
+        // Macro para ñ (Option + n → n en macOS)
         n_tilde: n_tilde {
-            label = "ZM_n_tilde";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
             bindings = <&kp LA(N)>, <&kp N>;
         };
         // Repite para é, í, ó, ú si necesitas...
@@ -157,8 +153,6 @@
 
 #define SYM_SPC  &lt SYM SPACE
 //#define LCA_ENT  &mt LC(LALT) ENTER
-#define A_ACUTE &mt A a_acute 
-#define N_TILDE &mt N n_tilde 
 #define SFT_ENT  &ht RSHFT ENTER
 #define SFT_ESC  &ht RSHFT ESC
 #define ALT_ESC  &ht LALT ESC
