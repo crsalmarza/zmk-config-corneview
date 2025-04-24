@@ -27,23 +27,52 @@
 #define HRMR(k1,k2,k3,k4) &ht RGUI  k1 &ht RCTRL k2  &ht RALT k3  &ht RSHFT  k4
 
 // === Macros para acentos y ñ (macOS U.S.) ===
+
 / {
     macros {
-       // Macro para á (Option + e → a en macOS)
+        // Macro para á (doble tap en A → á)
         a_acute: a_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings = <&kp LA(E)>, <&kp A>;
         };
-        // Macro para ñ (Option + n → n en macOS)
-           n_tilde: n_tilde {
+
+        // Macro para é (doble tap en E → é)
+        e_acute: e_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E)>, <&kp E>;
+        };
+
+        // Macro para í (doble tap en I → í)
+        i_acute: i_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E)>, <&kp I>;
+        };
+
+        // Macro para ó (doble tap en O → ó)
+        o_acute: o_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E)>, <&kp O>;
+        };
+
+        // Macro para ú (doble tap en U → ú)
+        u_acute: u_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E)>, <&kp U>;
+        };
+
+        // Macro para ñ (doble tap en N → ñ)
+        n_tilde: n_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(N)>, <&kp N>;
         };
-        // Repite para é, í, ó, ú si necesitas...
     };
-
 };
-
 
 
 
