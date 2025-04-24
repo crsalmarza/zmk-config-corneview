@@ -128,6 +128,24 @@
         };
     };
 
+/ {
+  macros {
+    // Caracteres en español (macOS U.S.)
+    n_tilde: n_tilde { bindings = <&kp LA(N) &kp SPACE>; }; // ñ
+    a_acute: a_acute { bindings = <&kp LA(E) &kp A>; };     // á
+    e_acute: e_acute { bindings = <&kp LA(E) &kp E>; };     // é
+  };
+
+  behaviors {
+    // Doble clic para ñ y á
+    mt_ntilde: mt { bindings = <&kp N>, <&n_tilde>; }; // n → ñ
+    mt_aacute: mt { bindings = <&kp A>, <&a_acute>; }; // a → á
+  };
+
+};
+
+
+
 
 #define SYM_SPC  &lt SYM SPACE
 #define LCA_ENT  &mt LC(LALT) ENTER
@@ -160,7 +178,7 @@
 &trans     HRML(A    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
- &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B          &kp N      &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
+ &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B         &mt_ntilde   &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    ALT_ESC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
