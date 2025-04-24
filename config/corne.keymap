@@ -14,7 +14,8 @@
 
 // === Definiciones ===
 //#define A_ACUTE &mt A a_acute  // a → á
-#define N_TILDE &mt N &n_tilde   // n → ñ
+//#define N_TILDE &mt N &n_tilde   // n → ñ
+#define N_TILDE &ht N &n_tilde
 
 // Home row mods macro
 //#define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT  k2  &ht LCTRL  k3  &ht LSHFT  k4
@@ -67,12 +68,16 @@
         };
 
        // Ñ (doble tap en N)
-        n_tilde: n_tilde {
+         n_tilde: n_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp LA(N)>, <&kp N>;
+            wait-ms = <20>;
+            tap-ms = <200>;
+            bindings = 
+                <&macro_press &kp LALT>,   // Presiona Alt (Option en macOS)
+                <&macro_tap &kp N>,        // Toca N
+                <&macro_release &kp LALT>, // Suelta Alt
+                <&macro_tap &kp N>;        // Toca N de nuevo (para generar ñ)
         };
     };
 };
