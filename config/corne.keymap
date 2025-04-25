@@ -45,7 +45,7 @@
             bindings = <&kp A>, <&a_acute>; // 1 tap: a | 2 taps: á
         };
         // Tap Dance para A/Á (mayúsculas)
-        td_A: tap_dance_A {
+        td_A: tap_dance_acute_A {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
