@@ -42,7 +42,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>; // Tiempo máximo entre taps
-            bindings = <&kp A>, <&a_acute>, <&A_acute>; // 1 tap: a | 2 taps: á
+            bindings = <&kp A>, <&a_acute>; // 1 tap: a | 2 taps: á
         };
         td_e: tap_dance_acute_e {
             compatible = "zmk,behavior-tap-dance";
@@ -85,12 +85,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(E)>, <&kp A>;
-        };
-        // Macro para Á (Alt + E + Shift + A)
-        A_acute: A_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E)>, <&kp LS(A)>; // LS = Left Shift
         };
         // Macro para é (Alt + E + E)
         e_acute: e_acute {
