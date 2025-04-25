@@ -12,14 +12,6 @@
 #define FNC 3
 
 
-// === Definiciones ===
-//#define A_ACUTE &mt A a_acute  // a → á
-//#define N_TILDE &mt N &n_tilde   // n → ñ
-//#define N_TILDE &ht N &n_tilde
-#define N_TILDE &kp N
-
-
-
 // Home row mods macro
 //#define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT  k2  &ht LCTRL  k3  &ht LSHFT  k4
 //#define HRMR(k1,k2,k3,k4) &ht RSHFT k1 &ht RCTRL k2  &ht RALT k3  &ht RGUI  k4
@@ -29,10 +21,10 @@
 //#define HRMR(k1,k2,k3,k4) &ht RCTRL  k1 &ht RGUI k2  &ht RALT k3  &ht RSHFT  k4
 
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LCTRL  k2  &ht LALT  k3  &ht LGUI  k4
+#define HRMR(k1,k2,k3,k4) &ht RGUI  k1 &ht RALT k2  &ht RCTRL k3  &ht RSHFT  k4
+
 #define CAGL(k1,k2,k3) &ht LCTRL k1  &ht LALT k2  &ht LGUI  k3
 #define CAGR(k1,k2,k3) &ht LGUI  k1  &ht LALT k2  &ht LCTRL  k3
-
-#define HRMR(k1,k2,k3,k4) &ht RGUI  k1 &ht RALT k2  &ht RCTRL k3  &ht RSHFT  k4
 
 // === Macros para acentos y ñ (macOS U.S.) ===
 //1. Configuración de Tap Dance
