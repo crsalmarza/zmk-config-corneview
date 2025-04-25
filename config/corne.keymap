@@ -28,10 +28,10 @@
 //#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT  k2  &ht LGUI  k3  &ht LCTRL  k4
 //#define HRMR(k1,k2,k3,k4) &ht RCTRL  k1 &ht RGUI k2  &ht RALT k3  &ht RSHFT  k4
 
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT  k2  &ht LCTRL  k3  &ht LGUI  k4
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LCTRL  k2  &ht LALT  k3  &ht LGUI  k4
 #define CAG(k1,k2,k3) &ht LCTRL k1  &ht LALT k2  &ht LGUI  k3
 
-#define HRMR(k1,k2,k3,k4) &ht RGUI  k1 &ht RCTRL k2  &ht RALT k3  &ht RSHFT  k4
+#define HRMR(k1,k2,k3,k4) &ht RGUI  k1 &ht RALT k2  &ht RCTRL k3  &ht RSHFT  k4
 
 // === Macros para acentos y ñ (macOS U.S.) ===
 //1. Configuración de Tap Dance
@@ -57,11 +57,25 @@
             tapping-term-ms = <200>;
             bindings = <&kp E>, <&e_acute>;
         };
+        // Tap Dance para E (mayúsculas)
+        td_ME: tap_dance_acute_ME {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LS(E)>, <&ME_acute>;
+        };
         td_i: tap_dance_acute_i {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp I>, <&i_acute>;
+        };
+        // Tap Dance para I (mayúsculas)
+        td_MI: tap_dance_acute_MI {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LS(I)>, <&MI_acute>;
         };
         td_o: tap_dance_acute_o {
             compatible = "zmk,behavior-tap-dance";
@@ -69,17 +83,38 @@
             tapping-term-ms = <200>;
             bindings = <&kp O>, <&o_acute>;
         };
+        // Tap Dance para O (mayúsculas)
+        td_MO: tap_dance_acute_MO {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LS(O)>, <&MO_acute>;
+        };
         td_u: tap_dance_acute_u {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp U>, <&u_acute>;
         };
+        // Tap Dance para U (mayúsculas)
+        td_MU: tap_dance_acute_MU {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LS(U)>, <&MU_acute>;
+        };
         td_n: tap_dance_tilde_n {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp N>, <&n_tilde>; // 1 tap: n | 2 taps: ñ
+        };
+        // Tap Dance para N (mayúsculas)
+        td_MN: tap_dance_acute_MN {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LS(N)>, <&MN_acute>;
         };
     };
 };
@@ -105,11 +140,23 @@
             #binding-cells = <0>;
             bindings = <&kp LA(E)>, <&kp E>;
         };
+        // Macro para E 
+        ME_acute: ME_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E)>, <&kp LS(E)>; // LS = Left Shift
+        };
         // Macro para í (Alt + E + I)
         i_acute: i_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(E)>, <&kp I>;
+        };
+        // Macro para I
+        MI_acute: MI_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E)>, <&kp LS(I)>; // LS = Left Shift
         };
         // Macro para ó (Alt + E + O)
         o_acute: o_acute {
@@ -117,17 +164,35 @@
             #binding-cells = <0>;
             bindings = <&kp LA(E)>, <&kp O>;
         };
+        // Macro para O
+        MO_acute: MO_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E)>, <&kp LS(O)>; // LS = Left Shift
+        };
         // Macro para ú (Alt + E + U)
         u_acute: u_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(E)>, <&kp U>;
         };
+        // Macro para U
+        MU_acute: MU_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E)>, <&kp LS(U)>; // LS = Left Shift
+        };
         // Macro para ñ (Alt + N + N)
         n_tilde: n_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(N)>, <&kp N>;
+        };
+        // Macro para Ñ
+        MN_acute: MN_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E)>, <&kp LS(N)>; // LS = Left Shift
         };
     };
 };
@@ -139,6 +204,41 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&td_a>, <&td_MA>; // Sin Shift: a/á | Con Shift: A/Á
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        // Alterna entre Tap Dance con Shift
+        m_e: morph_acute_e {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&td_e>, <&td_ME>; // Sin Shift | Con Shift: 
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        // Alterna entre Tap Dance con Shift
+        m_i: morph_acute_i {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&td_i>, <&td_MI>; // Sin Shift | Con Shift: 
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        // Alterna entre Tap Dance con Shift
+        m_o: morph_acute_o {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&td_o>, <&td_MO>; // Sin Shift | Con Shift: 
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        // Alterna entre Tap Dance con Shift
+        m_u: morph_acute_u {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&td_u>, <&td_MU>; // Sin Shift | Con Shift: 
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        // Alterna entre Tap Dance con Shift
+        m_n: morph_acute_n {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&td_n>, <&td_MN>; // Sin Shift | Con Shift: 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -293,13 +393,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │    P     │
-&trans      &kp Q      &kp W       &td_e      &kp R      &kp T         &kp Y       &td_u     &td_i       &td_o       &kp P     &trans     
+&trans      &kp Q      &kp W       &m_e      &kp R      &kp T         &kp Y       &m_u     &m_i       &m_o       &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   BSPC   │
 &trans      &m_a CAG(   S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
- &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B           &td_n    &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
+ &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B           &m_n    &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    ALT_ESC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
