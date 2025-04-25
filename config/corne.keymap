@@ -56,7 +56,7 @@
             tapping-term-ms = <200>;
             bindings = <&kp I>, <&i_acute>;
         };
-        td_acute_o: tap_dance_acute_o {
+        td_o: tap_dance_acute_o {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
