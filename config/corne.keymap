@@ -192,7 +192,7 @@
         MN_acute: MN_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(E)>, <&kp LS(N)>; // LS = Left Shift
+            bindings = <&kp LA(N)>, <&kp LS(N)>; // LS = Left Shift
         };
     };
 };
