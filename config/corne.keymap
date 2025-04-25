@@ -45,11 +45,11 @@
             bindings = <&kp A>, <&a_acute>; // 1 tap: a | 2 taps: á
         };
         // Tap Dance para A/Á (mayúsculas)
-        td_A: tap_dance_acute_A {
+        td_MA: tap_dance_acute_MA {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LS(A)>, <&A_acute>; // 1 tap: A | 2 taps: Á
+            bindings = <&kp LS(A)>, <&MA_acute>; // 1 tap: A | 2 taps: Á
         };
         td_e: tap_dance_acute_e {
             compatible = "zmk,behavior-tap-dance";
@@ -94,7 +94,7 @@
             bindings = <&kp LA(E)>, <&kp A>;
         };
         // Macro para Á (Alt + E + Shift + a)
-        A_acute: A_acute {
+        MA_acute: MA_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(E)>, <&kp LS(A)>; // LS = Left Shift
