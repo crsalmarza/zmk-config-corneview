@@ -135,7 +135,7 @@
 / {
     behaviors {
         // Alterna entre Tap Dance de a/á y A/Á con Shift
-        morph_acute_a: morph_acute_a {
+        m_a: morph_acute_a {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&td_a>, <&td_MA>; // Sin Shift: a/á | Con Shift: A/Á
@@ -296,7 +296,7 @@
 &trans      &kp Q      &kp W       &td_e      &kp R      &kp T         &kp Y       &td_u     &td_i       &td_o       &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   BSPC   │
-&trans      &td_a CAG(   S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
+&trans      &m_a CAG(   S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
  &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B           &td_n    &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
