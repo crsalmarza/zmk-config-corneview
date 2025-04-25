@@ -269,7 +269,7 @@
 &trans      &kp Q      &kp W     &td_acute_e   &kp R      &kp T         &kp Y   &td_acute_u &td_acute_i &td_acute_o  &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   BSPC   │
-&trans  HRML(td_acute_a    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
+&trans  HRML(&td_acute_a    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
  &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B         &td_tilde_n   &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
