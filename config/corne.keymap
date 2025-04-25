@@ -29,6 +29,8 @@
 //#define HRMR(k1,k2,k3,k4) &ht RCTRL  k1 &ht RGUI k2  &ht RALT k3  &ht RSHFT  k4
 
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT  k2  &ht LCTRL  k3  &ht LGUI  k4
+#define CAG(k1,k2,k3) &ht LCTRL k2  &ht LALT k3  &ht LGUI  k4
+
 #define HRMR(k1,k2,k3,k4) &ht RGUI  k1 &ht RCTRL k2  &ht RALT k3  &ht RSHFT  k4
 
 // === Macros para acentos y ñ (macOS U.S.) ===
@@ -36,19 +38,19 @@
 / {
     behaviors {
         // Define un comportamiento de Tap Dance para cada vocal y la ñ
-        td_acute_a: tap_dance_acute_a {
+        td_a: tap_dance_acute_a {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>; // Tiempo máximo entre taps
             bindings = <&kp A>, <&a_acute>; // 1 tap: a | 2 taps: á
         };
-        td_acute_e: tap_dance_acute_e {
+        td_e: tap_dance_acute_e {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp E>, <&e_acute>;
         };
-        td_acute_i: tap_dance_acute_i {
+        td_i: tap_dance_acute_i {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -60,13 +62,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp O>, <&o_acute>;
         };
-        td_acute_u: tap_dance_acute_u {
+        td_u: tap_dance_acute_u {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp U>, <&u_acute>;
         };
-        td_tilde_n: tap_dance_tilde_n {
+        td_n: tap_dance_tilde_n {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -266,13 +268,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │    P     │
-&trans      &kp Q      &kp W     &td_acute_e   &kp R      &kp T         &kp Y   &td_acute_u &td_acute_i &td_acute_o  &kp P     &trans     
+&trans      &kp Q      &kp W       &td_e      &kp R      &kp T         &kp Y       &td_u     &td_i       &td_o       &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   BSPC   │
-&trans  HRML(&td_acute_a    ,    S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
+&trans      &td_a CAG(   S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
- &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B         &td_tilde_n   &kp M     &kp COMMA   &kp DOT    GUI_ENT  &trans     
+ &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B           &td_n    &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    ALT_ESC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
