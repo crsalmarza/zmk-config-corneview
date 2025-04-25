@@ -125,9 +125,6 @@
     };
 };
 
-//Paso 3: Comportamiento "mod-morph" - Vincula Tap Dance con Shift para alternar entre mayúsculas/minúsculas:
-
-
 
 // === Macros para acentos y ñ (macOS U.S.) ===
 
