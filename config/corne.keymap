@@ -138,7 +138,7 @@
         morph_acute_a: morph_acute_a {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&td_a>, <&td_A>; // Sin Shift: a/á | Con Shift: A/Á
+            bindings = <&td_a>, <&td_MA>; // Sin Shift: a/á | Con Shift: A/Á
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
