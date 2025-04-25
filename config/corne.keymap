@@ -127,18 +127,7 @@
 
 //Paso 3: Comportamiento "mod-morph" - Vincula Tap Dance con Shift para alternar entre mayúsculas/minúsculas:
 
-/ {
-    behaviors {
-        // Alterna entre 'a_acute' y 'A_acute' al presionar Shift
-        mor_a: morph_acute_a {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&td_a>, <&A_acute>; // Sin Shift: a/á | Con Shift: A/Á
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        // Repite para e, i, o, u, n...
-    };
-};
+
 
 // === Macros para acentos y ñ (macOS U.S.) ===
 
@@ -291,7 +280,7 @@
 &trans      &kp Q      &kp W       &td_e      &kp R      &kp T         &kp Y       &td_u     &td_i       &td_o       &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   BSPC   │
-&trans      &td_a CAG(   S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
+&trans      &td_a  CAG(   S     ,    D     ,   F      )  &kp G          &kp H     HRMR(J   ,    K     ,    L     ,   BSPC   ) &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
  &trans    HRML(Z    ,   X      ,     C    ,     V    )  &kp B           &td_n    &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
