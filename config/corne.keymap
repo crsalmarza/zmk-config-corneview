@@ -398,7 +398,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │    P     │
-&trans      &q_tab      &kp W       &m_e      &kp R      &kp T         &kp Y       &m_u     &m_i       &m_o       &kp P     &trans     
+&trans       &kp Q      &kp W       &m_e      &kp R      &kp T         &kp Y       &m_u        &m_i       &m_o       &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   BSPC   │
 &trans      &m_a CAGL(   S      ,    D     ,   F      )  &kp G        &kp H CAGR(    J     ,    K     ,    L     )  SFT_BSPC   &trans     
