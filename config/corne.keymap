@@ -258,11 +258,11 @@
 / {
     behaviors {
         q_tab: q_tab {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";  // Prioriza Tab, a menos que se combine con otra tecla
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            //flavor = "tap-unless-interrupted";  // Prioriza Tab, a menos que se combine con otra tecla
             tapping-term-ms = <200>;           // Tiempo para considerar un tap
-            quick-tap-ms = <0>;                // Desactiva el "quick tap"
+            //quick-tap-ms = <0>;                // Desactiva el "quick tap"
             bindings = <&kp TAB>, <&kp Q>;     // Tap: Tab | Hold: Q
         };
     };
