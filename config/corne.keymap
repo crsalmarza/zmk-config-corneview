@@ -389,6 +389,12 @@
 #define VUP  &kp C_VOL_UP
 #define NXT  &kp C_NEXT
 #define PLP  &kp C_PP
+
+#define LFT  &kp LEFT
+#define DWN  &kp DOWN
+#define  UP  &kp UP
+#define RHT  &kp RIGHT
+
 //HRML(C_PREV   , C_VOL_DN , C_VOL_UP ,  C_NEXT  )
 #define NUM_TAB  &lt NUM TAB
 #define NUM_SPC  &lt NUM SPACE
@@ -406,10 +412,11 @@
         //│     A    │  S       │  D       │  F       │  G       │   │     H    │    J     │    K     │    L     │   BSPC   │
 &trans      &m_a CAGL(   S      ,    D     ,   F      )  &kp G        &kp H CAGR(    J     ,    K     ,    L     )  SFT_BSPC   &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │   , <    │   . >    │  GUI_ENT │
+        //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │   , <    │   . >    │   ENT    │
  &trans     SFT_Z       &kp X      &kp C      &kp  V     &kp B           &m_n      &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                   ALT_ESC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
+        //                      │    ESC   │   TAB    │    ENT   │   │   SPC    │   SPC    │    ESC   │ 
+                                  ALT_ESC    NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -424,7 +431,7 @@
 &trans     HRML(TAB  ,  LEFT    ,   DOWN   ,  RIGHT   ) &kp MINUS     &kp EQUAL  HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│   PREV   │  DOWN    │   UP     │   NEXT   │   MUTE   │   │   \ |    │  1 !     │  2 @     │  3 #     │  / ? ¿   │   
-&trans HRML(C_PREV   , C_VOL_DN , C_VOL_UP ,  C_NEXT  )   PLP          &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
+&trans        PRE        VDN        VUP        NXT        PLP          &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
         //├──────────┼──────────┼──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┼──────────┼──────────┤  
                                         &trans    &trans    &trans          &trans     &kp N0     &trans        
         //                          ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -437,11 +444,11 @@
         //│    1 !   │    2 @   │   3 #    │   4 $    │    5 %   │   │   6 ^    │   7 &    │   8 *    │   9 (    │   0 )    │
    &trans    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5        &kp N6      &kp N7    &kp N8     &kp N9     &kp N0     &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ LEFT     │  DOWN    │    UP    │  RIGHT   │          │   │    F11   │    F4    │    F5    │    F6    │  ; :     │
-  &trans   HRML(LEFT ,  DOWN    ,    UP    ,  RIGHT   )  &trans        &kp F11   HRMR( F4  ,    F5    ,    F6    , SEMI     ) &trans 
+        //│ LEFT     │  DOWN    │    UP    │  RIGHT   │          │   │    F11   │    F4    │    F5    │    UP    │  ; :     │
+  &trans   HRML(LEFT ,  DOWN    ,    UP    ,  RIGHT   )  &trans        &kp F11   HRMR( F4  ,    F5    ,    UP    , SEMI     ) &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │    F10   │    F1    │    F2    │    F3    │   \ |    │
-   &trans  &kp LG(TAB) &kt LALT  &kt LG(TAB)     &trans     &trans     &kp F10      &kp F1    &kp F2     &kp F3     &kp BSLH  &trans 
+        //│    F1    │    F2    │    F3    │    F4    │    \ |   │   │    F10   │    F1    │    LFT   │    DWN   │    RGH   │
+   &trans    &kp F1    &kp F2     &kp F3     &kp F4     &kp BSLH       &kp F10      &kp F1      LFT        DWN        RGH      &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                     &trans    &trans     &trans         &trans     &trans   &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
