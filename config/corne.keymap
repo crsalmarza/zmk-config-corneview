@@ -384,11 +384,11 @@
 #define CTL_ACUTE &ht LCTRL ACUTE
 #define CTL_SPC  &ht RCTRL SPACE
 #define SFT_Z  &ht LSHFT Z
-#define PRE  &C_PREV
-#define VDN  &C_VOL_DN
-#define VUP  &C_VOL_UP
-#define NXT  &C_NEXT
-#define PLP  &C_PP
+#define PRE  &kp C_PREV
+#define VDN  &kp C_VOL_DN
+#define VUP  &kp C_VOL_UP
+#define NXT  &kp C_NEXT
+#define PLP  &kp C_PP
 //HRML(C_PREV   , C_VOL_DN , C_VOL_UP ,  C_NEXT  )
 #define NUM_TAB  &lt NUM TAB
 #define NUM_SPC  &lt NUM SPACE
@@ -400,14 +400,14 @@
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │    P     │
+        //│     Q    │    W     │     E    │     R    │    T     │   │     Y    │     U    │    I     │     O    │    P     │
 &trans       &kp Q      &kp W       &m_e      &kp R      &kp T         &kp Y       &m_u        &m_i       &m_o       &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│     A    │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │   BSPC   │
+        //│     A    │  S       │  D       │  F       │  G       │   │     H    │    J     │    K     │    L     │   BSPC   │
 &trans      &m_a CAGL(   S      ,    D     ,   F      )  &kp G        &kp H CAGR(    J     ,    K     ,    L     )  SFT_BSPC   &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │  GUI_ENT │
- &trans     SFT_Z       &kp X      &kp C      &kp  V     &kp B           &m_n    &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
+        //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │   , <    │   . >    │  GUI_ENT │
+ &trans     SFT_Z       &kp X      &kp C      &kp  V     &kp B           &m_n      &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    ALT_ESC   NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -424,9 +424,9 @@
 &trans     HRML(TAB  ,  LEFT    ,   DOWN   ,  RIGHT   ) &kp MINUS     &kp EQUAL  HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│   PREV   │  DOWN    │   UP     │   NEXT   │   MUTE   │   │   \ |    │  1 !     │  2 @     │  3 #     │  / ? ¿   │   
-&trans HRML(C_PREV   , C_VOL_DN , C_VOL_UP ,  C_NEXT  )    &PLP       &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
+&trans HRML(C_PREV   , C_VOL_DN , C_VOL_UP ,  C_NEXT  )   PLP          &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
         //├──────────┼──────────┼──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┼──────────┼──────────┤  
-                                   &trans    &trans    &trans          &trans     &kp N0     &trans        
+                                        &trans    &trans    &trans          &trans     &kp N0     &trans        
         //                          ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;    
         };
