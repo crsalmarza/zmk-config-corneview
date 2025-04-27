@@ -392,7 +392,7 @@
 
 #define LFT  &kp LEFT
 #define DWN  &kp DOWN
-#define  UP  &kp UP
+#define UPT   &kp UP
 #define RHT  &kp RIGHT
 
 //HRML(C_PREV   , C_VOL_DN , C_VOL_UP ,  C_NEXT  )
@@ -444,17 +444,14 @@
         //│    1 !   │    2 @   │   3 #    │   4 $    │    5 %   │   │   6 ^    │   7 &    │   8 *    │   9 (    │   0 )    │
    &trans    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5        &kp N6      &kp N7    &kp N8     &kp N9     &kp N0     &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ LEFT     │  DOWN    │    UP    │  RIGHT   │          │   │    F11   │    F4    │    F5    │    UP    │  ; :     │
-  &trans   HRML(LEFT ,  DOWN    ,    UP    ,  RIGHT   )  &trans        &kp F11   HRMR( F4  ,    F5    ,    UP    , SEMI     ) &trans 
+        //│   F5     │    F6    │    F6    │   F8     │    ; :   │   │    - _   │   [ {    │    F5    │    } ]   │   ' "    │
+  &trans   HRML(F5   ,    F6    ,    F7    ,   F8     ) &kp SEMI      &kp MINUS HRMR( LBKT ,    UPT   ,   RBKT   ,    SQT   ) &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    F1    │    F2    │    F3    │    F4    │    \ |   │   │    F10   │    F1    │    LFT   │    DWN   │    RGH   │
-   &trans    &kp F1    &kp F2     &kp F3     &kp F4     &kp BSLH       &kp F10      &kp F1      LFT        DWN        RGH      &trans 
+        //│    F1    │    F2    │    F3    │    F4    │    \ |   │   │    = +   │    LFT   │    DWN   │    RGH   │    RGH   │
+   &trans    &kp F1    &kp F2     &kp F3     &kp F4     &kp BSLH       &kp EQUAL     LFT        DWN        RGH        RGH      &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                     &trans    &trans     &trans         &trans     &trans   &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
-
-//           │   HOME   │ PAGE DN  │ PAGE UP  │ END      │ my_appl  │   │    F12   │    F7    │    F8    │    F9    │  BSPC    │
-//   &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &my_appl       &kp F12      &kp F7    &kp F8     &kp F9     &kp BSPC  &trans 
             >;
         };
 
