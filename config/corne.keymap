@@ -26,26 +26,18 @@
 //1. Configuración de Tap Dance
 / {
     behaviors {
-        //est
-        sft_morph_a: shift_morph_a {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            bindings = <&kp>, <&m_a>;
-       };
         // Define un comportamiento de Tap Dance para cada vocal y la ñ
         td_a: tap_dance_acute_a {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>; // Tiempo máximo entre taps
+            tapping-term-ms = <250>; // Tiempo máximo entre taps
             bindings = <&kp A>, <&a_acute>; // 1 tap: a | 2 taps: á
         };
         // Tap Dance para A/Á (mayúsculas)
         td_MA: tap_dance_acute_MA {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp LS(A)>, <&MA_acute>; // 1 tap: A | 2 taps: Á
         };
         td_e: tap_dance_acute_e {
@@ -425,7 +417,7 @@
  &trans     SFT_Z       &kp X      &kp C      &kp  V     &kp B           &m_n      &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                      │    ESC   │   TAB    │    ENT   │   │   SPC    │   SPC    │    ESC   │ 
-                                  ALT_ESC    NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     SFT_ESC
+                                  SFT_ESC    NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     ALT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
