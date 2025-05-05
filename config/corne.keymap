@@ -39,7 +39,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>; // Tiempo máximo entre taps
-            bindings = <&kp A>, <&a_acute>; // 1 tap: a | 2 taps: á
+            bindings = <&kp LSHFT A>, <&a_acute>; // 1 tap: a | 2 taps: á
         };
         // Tap Dance para A/Á (mayúsculas)
         td_MA: tap_dance_acute_MA {
