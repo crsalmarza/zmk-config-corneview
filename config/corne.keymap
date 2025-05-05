@@ -419,7 +419,7 @@
 &trans       &kp Q      &kp W       &m_e      &kp R      &kp T         &kp Y       &m_u        &m_i       &m_o       &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     A    │  S       │  D       │  F       │  G       │   │     H    │    J     │    K     │    L     │   BSPC   │
-&trans  &ht_shift_a LSHFT A &m_a CAGL(   S     ,    D     ,   F      )  &kp G        &kp H CAGR(    J     ,    K     ,    L     )  SFT_BSPC   &trans     
+&trans  &ht LSHFT m_a CAGL(   S     ,    D     ,   F      )  &kp G        &kp H CAGR(    J     ,    K     ,    L     )  SFT_BSPC   &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │   , <    │   . >    │   ENT    │
  &trans     SFT_Z       &kp X      &kp C      &kp  V     &kp B           &m_n      &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
