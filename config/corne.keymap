@@ -384,7 +384,7 @@
 #define CTL_ACUTE &ht LCTRL ACUTE
 #define CTL_SPC  &ht RCTRL SPACE
 #define SFT_Z  &ht LSHFT Z
-#define SFT_A  &ht LSHFT m_a // Hold: LSHFT, Tap: m_a (comportamiento actual de acentos)
+#define SFT_A  &ht LSHFT m_a 
 #define PRE  &kp C_PREV
 #define VDN  &kp C_VOL_DN
 #define VUP  &kp C_VOL_UP
@@ -411,7 +411,7 @@
 &trans       &kp Q      &kp W       &m_e      &kp R      &kp T         &kp Y       &m_u        &m_i       &m_o       &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     A    │  S       │  D       │  F       │  G       │   │     H    │    J     │    K     │    L     │   BSPC   │
-&trans      SFT_A CAGL(   S      ,    D     ,   F      )  &kp G        &kp H CAGR(    J     ,    K     ,    L     )  SFT_BSPC   &trans     
+&trans      SFT_A CAGL(   S     ,    D     ,   F      )  &kp G        &kp H CAGR(    J     ,    K     ,    L     )  SFT_BSPC   &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │   , <    │   . >    │   ENT    │
  &trans     SFT_Z       &kp X      &kp C      &kp  V     &kp B           &m_n      &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
