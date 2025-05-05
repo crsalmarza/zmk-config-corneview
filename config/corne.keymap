@@ -384,7 +384,7 @@
 #define CTL_ACUTE &ht LCTRL ACUTE
 #define CTL_SPC  &ht RCTRL SPACE
 #define SFT_Z  &ht LSHFT Z
-#define SFT_A  &ht LSHFT m_a 
+#define SFT_A  &ht LSHFT  &m_a 
 #define PRE  &kp C_PREV
 #define VDN  &kp C_VOL_DN
 #define VUP  &kp C_VOL_UP
