@@ -425,33 +425,33 @@
         NUM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮   
-        //│    ` ~   │  my_m    │    UP    │    my_p  │  [ {     │   │  } ]     │  7 &     │  8 *     │  9 (     │  ; :     │   
-&trans     &kp GRAVE   &my_appl    &kp UP    &my_p     &kp LBKT        &kp RBKT   &kp N7     &kp N8     &kp N9    &kp SEMI    &trans
+        //│    1 !   │    2 @   │   3 #    │   4 $    │    5 %   │   │   6 ^    │  7 &     │  8 *     │  9 (     │   0 )    │   
+&trans      &kp N1     &kp N2     &kp N3     &kp N4     &kp N5        &kp N6      &kp N7     &kp N8     &kp N9      &kp N0    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
-        //│ LEFT     │  DOWN    │   DOWN   │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │    ' "   │   
-&trans     HRML(TAB  ,  LEFT    ,   DOWN   ,  RIGHT   ) &kp MINUS     &kp EQUAL  HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
+        //│ LEFT     │  DOWN    │    UP    │  RIGHT   │  - _     │   │   = +    │  4 $     │  5 %     │  6 ^     │    ' "   │   
+&trans     HRML(LEFT ,  DOWN    ,    UP    ,  RIGHT   ) &kp MINUS     &kp EQUAL  HRMR( N4  ,   N5     ,   N6     ,  SQT     )  &trans    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤   
         //│   PREV   │  DOWN    │   UP     │   NEXT   │   MUTE   │   │   \ |    │  1 !     │  2 @     │  3 #     │  / ? ¿   │   
 &trans        PRE        VDN        VUP        NXT        PLP          &kp BSLH    &kp N1     &kp N2     &kp N3    &kp FSLH   &trans
         //├──────────┼──────────┼──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────┼──────────┼──────────┤  
-                                        &trans    &trans    &trans          &trans     &kp N0     &trans        
-        //                          ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
+                                   &trans    &trans    &trans           &trans    &trans     &trans        
+        //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;    
         };
 
         SYM_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│    1 !   │    2 @   │   3 #    │   4 $    │    5 %   │   │   6 ^    │   7 &    │   8 *    │   9 (    │   0 )    │
-   &trans    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5        &kp N6      &kp N7    &kp N8     &kp N9     &kp N0     &trans 
+        //│     !    │     @    │     #    │     $    │     %    │   │     ^    │     &    │     *    │     (    │     )    │
+   &trans   &kp EXCL     &kp AT   &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR     &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│   F5     │    F6    │    F6    │   F8     │    ; :   │   │    - _   │   [ {    │    F5    │    } ]   │   ' "    │
-   &trans   HRML(F5  ,    F6    ,    F7    ,   F8     ) &kp SEMI      &kp MINUS HRMR(LBKT  ,    UP    ,   RBKT   ,    SQT   ) &trans 
+        //│   F5     │    F6    │    F6    │   F8     │    - _   │   │    = +   │    ; :   │   ' "    │    [ {   │   } ]    │
+   &trans   HRML(F5  ,    F6    ,    F7    ,   F8     ) &kp MINUS      &kp EQUAL HRMR(SEMI  ,   SQT    ,   LBKT   ,    RBKT   ) &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    F1    │    F2    │    F3    │    F4    │    \ |   │   │    = +   │    LFT   │    DWN   │    RGH   │   ; :    │
-   &trans    &kp F1    &kp F2     &kp F3     &kp F4     &kp BSLH       &kp EQUAL  &kp LEFT   &kp DOWN   &kp RIGHT   &kp SEMI    &trans 
+        //│    F1    │    F2    │    F3    │    F4    │    ` ~   │   │    \ |   │    LFT   │  DOWN    │    UP    │  RIGHT   │
+   &trans    &kp F1    &kp F2     &kp F3     &kp F4     &kp GRAVE      &kp BSLH  &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT   &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                    &trans    &trans     &trans         &trans     &trans   &trans
+                                    &trans    &trans     &trans         &trans     &trans     &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -459,8 +459,8 @@
         FNC_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │PROFILE 3 │          │          │          │  RESET   │
-&trans     &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0  &bt BT_SEL 3   &trans     &trans     &trans    &sys_reset &trans 
+        //│ RESET    │          │  my_m    │  &my_p   │PROFILE 0 │   │PROFILE 3 │          │          │          │  RESET   │
+&trans     &sys_reset  &trans     &my_appl    &my_p    &bt BT_SEL 0  &bt BT_SEL 3   &trans     &trans     &trans    &sys_reset &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │PROFILE 4 │          │          │          │BOOTLOADER│
 &trans    &bootloader  &trans     &trans     &trans    &bt BT_SEL 1  &bt BT_SEL 4   &trans     &trans     &trans   &bootloader  &trans 
@@ -468,7 +468,7 @@
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
 &trans       &trans     &trans     &trans   &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans  &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                     &trans   &trans     &trans         &trans     &trans   &trans
+                                  &trans     &trans     &trans         &trans     &trans      &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
