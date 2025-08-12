@@ -416,7 +416,7 @@
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │   , <    │   . >    │   ENT    │
  &trans     SFT_Z       &kp X      &kp C      &kp  V     &kp B           &m_n      &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                      │    ESC   │   TAB    │    ENT   │   │   SPC    │   SPC    │    ESC   │ 
+        //                      │    SFT   │   TAB    │    ENT   │   │   SPC    │   SPC    │    ALT   │ 
                                   SFT_ESC    NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     ALT_ESC
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
@@ -448,8 +448,8 @@
         //│   F5     │    F6    │    F6    │   F8     │    - _   │   │    = +   │    ; :   │   ' "    │    [ {   │   } ]    │
    &trans   HRML(F5  ,    F6    ,    F7    ,   F8     ) &kp MINUS      &kp EQUAL HRMR(SEMI  ,   SQT    ,   LBKT   ,    RBKT   ) &trans 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    F1    │    F2    │    F3    │    F4    │    ` ~   │   │    \ |   │    LFT   │  DOWN    │    UP    │  RIGHT   │
-   &trans    &kp F1    &kp F2     &kp F3     &kp F4     &kp GRAVE      &kp BSLH  &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT   &trans 
+        //│    F1    │    F2    │    F3    │    F4    │    ` ~   │   │    \ |   │    LFT   │    UP    │    DOWN  │  RIGHT   │
+   &trans    &kp F1    &kp F2     &kp F3     &kp F4     &kp GRAVE      &kp BSLH  &kp LEFT    &kp UP     &kp DOWN   &kp RIGHT   &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                     &trans    &trans     &trans         &trans     &trans     &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
