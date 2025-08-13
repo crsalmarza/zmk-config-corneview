@@ -374,7 +374,9 @@
 #define SFT_ENT  &ht RSHFT ENTER
 #define SFT_ESC  &ht RSHFT ESC
 #define ALT_ESC  &ht LALT ESC
+#define ALT_FSLH  &ht LALT FSLH
 #define SFT_BSPC &ht RSHFT BSPC
+#define ALT_BSPC &ht LALT BSPC
 #define GUI_BSPC  &ht RGUI BSPC
 //#define GUI_TAB  &ht RGUI LG(TAB)
 #define GUI_ENT  &ht RGUI ENTER
@@ -411,13 +413,13 @@
 &trans       &kp Q      &kp W       &m_e      &kp R      &kp T         &kp Y       &m_u        &m_i       &m_o       &kp P     &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     A    │  S       │  D       │  F       │  G       │   │     H    │    J     │    K     │    L     │   BSPC   │
-&trans      &m_a CAGL(    S     ,    D     ,   F      )  &kp G        &kp H CAGR(    J     ,    K     ,    L     )  SFT_BSPC   &trans     
+&trans      &m_a CAGL(    S     ,    D     ,   F      )  &kp G        &kp H CAGR(    J     ,    K     ,    L     )  ALT_BSPC   &trans     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    Z     │  X       │  C       │  V       │  B       │   │  N       │  M       │   , <    │   . >    │   ENT    │
  &trans     SFT_Z       &kp X      &kp C      &kp  V     &kp B           &m_n      &kp M     &kp COMMA   &kp DOT    SFT_ENT    &trans     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                      │    SFT   │   TAB    │    ENT   │   │   SPC    │   SPC    │    ALT   │ 
-                                  SFT_ESC    NUM_TAB     GUI_ENT       CTL_SPC    SYM_SPC     ALT_ESC
+        //                      │    ESC   │   TAB    │    ENT   │   │   TAB     │   SPC    │   FSLH   │ 
+                                  SFT_ESC    NUM_TAB     GUI_ENT       CTL_TAB    SYM_SPC    ALT_FSLH
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
